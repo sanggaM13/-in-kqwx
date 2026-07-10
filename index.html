@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       SEO META TAGS
+       ============================================================ -->
+  <!-- GANTI DATA DIRI DI SINI: Ganti [NAMA LENGKAP] dengan nama Anda -->
+  <title>KHAIRI SANGGA MUNANDAR — Fullstack Developer &amp; System Analyst</title>
+  <meta name="description"
+    content="Portfolio pribadi KHAIRI SANGGA MUNANDAR — Fullstack Developer, System Analyst, dan Information Systems Graduate. Berpengalaman di Laravel, WhatsApp Gateway, Telegram Bot, dan n8n." />
+  <meta name="keywords"
+    content="portfolio, fullstack developer, system analyst, Laravel, PHP, Python, n8n, Telegram Bot, WhatsApp Gateway" />
+  <meta name="author" content="KHAIRI SANGGA MUNANDAR" />
+
+  <!-- Open Graph / Social Media -->
+  <!-- GANTI DATA DIRI DI SINI: Ganti URL dengan URL deploy Anda -->
+  <meta property="og:title" content="KHAIRI SANGGA MUNANDAR — Portfolio" />
+  <meta property="og:description" content="Fullstack Developer & System Analyst — Laravel, PHP, Python, n8n" />
+  <meta property="og:image" content="assets/images/pp.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- ============================================================
+       FAVICON
+       ============================================================ -->
+  <link rel="icon" type="image/png" href="assets/images/pp.jpg" />
+
+  <!-- ============================================================
+       GOOGLE FONTS — INTER
+       ============================================================ -->
+  <!-- ============================================================
+       GOOGLE FONTS — PLAYFAIR DISPLAY + INTER
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- ============================================================
+       FONT AWESOME — ICONS
+       ============================================================ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- ============================================================
+       AOS — ANIMATE ON SCROLL
+       ============================================================ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- ============================================================
+       STYLESHEET UTAMA
+       ============================================================ -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- ============================================================
+     CUSTOM CURSOR - BIDIKAN MERAH ARTISTIK
+     ============================================================ -->
+  <div class="cursor-target" id="cursorTarget">
+    <div class="outer-ring"></div>
+    <div class="inner-ring"></div>
+    <div class="dot-center"></div>
+    <div class="crosshair crosshair-h"></div>
+    <div class="crosshair crosshair-v"></div>
+    <div class="crosshair-ext crosshair-ext-h"></div>
+    <div class="crosshair-ext crosshair-ext-v"></div>
+  </div>
+
+  <!-- ============================================================
+       LOADING SCREEN
+       ============================================================ -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <!-- GANTI DATA DIRI DI SINI: Ganti inisial Anda -->
+        <span class="logo-text">KS</span>
+        <div class="loading-ring"></div>
+      </div>
+      <div class="loading-bar-container">
+        <div class="loading-bar" id="loading-bar"></div>
+      </div>
+      <p class="loading-text">The Journey Begins.....</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     ELEMEN VISUAL DEKORATIF - SKETSA & SILUET
+     ============================================================ -->
+
+  <!-- Noise Overlay (Tekstur grain) -->
+  <div class="noise-overlay"></div>
+
+  <!-- Background Dots (Titik-titik halus) -->
+  <div class="bg-dots"></div>
+
+  <!-- Geometric Shapes -->
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+  <div class="shape shape-4"></div>
+
+  <!-- Silhouette / Sketsa -->
+  <div class="silhouette silhouette-1">✦</div>
+  <div class="silhouette silhouette-2">◈</div>
+  <div class="silhouette silhouette-3">⟡</div>
+
+  <!-- Floating Icons -->
+  <div class="floating-icon"><i class="fas fa-code"></i></div>
+  <div class="floating-icon"><i class="fas fa-palette"></i></div>
+  <div class="floating-icon"><i class="fas fa-cube"></i></div>
+  <div class="floating-icon"><i class="fas fa-bolt"></i></div>
+
+
+
+  <!-- ============================================================
+       SCROLL PROGRESS BAR
+       ============================================================ -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Nama Singkat -->
+      <!-- GANTI DATA DIRI DI SINI: Ganti teks logo -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket"></span>
+        <span class="logo-name">KS</span>
+        <span class="logo-bracket"></span>
+      </a>
+
+      <!-- Menu navigasi -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <!-- Dark Mode Toggle -->
+      <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon">dark mode</i>
+      </button>
+      <!-- Hamburger menu (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section id="home" class="hero">
+    <!-- Animated gradient background -->
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+      <!-- Particle canvas -->
+      <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <div class="hero-container">
+      <!-- Floating profile image -->
+      <div class="hero-image-wrapper">
+        <div class="hero-image-ring ring-1"></div>
+        <div class="hero-image-ring ring-2"></div>
+        <div class="hero-image-ring ring-3"></div>
+        <div class="hero-image-frame">
+          <!-- GANTI DATA DIRI DI SINI: Ganti foto profil Anda di assets/images/profile.jpg -->
+          <img src="assets/images/pp.jpg" alt="Profile Photo" class="hero-profile-img" id="profile-img" />
+        </div>
+        <div class="hero-badge">
+          <i class="fas fa-code"></i>
+          <span>Open to Work</span>
+        </div>
+      </div>
+
+      <!-- Hero text content -->
+      <div class="hero-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="hero-greeting">
+          <span class="greeting-line"></span>
+          <span>Hello, I'm</span>
+        </div>
+
+        <!-- GANTI DATA DIRI DI SINI: Ganti dengan nama lengkap Anda -->
+        <h1 class="hero-name" id="hero-name">KHAIRI SANGGA MUNANDAR</h1>
+
+        <!-- Typing animation — posisi/jabatan -->
+        <div class="hero-position">
+          <span class="position-prefix">I'm a</span>
+          <span class="typing-text" id="typing-text"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+
+        <!-- Deskripsi singkat -->
+        <p class="hero-description">
+          Fresh Graduate Sistem Informasi yang memiliki minat pada pengembangan aplikasi web,
+          integrasi API, workflow automation, dan analisis data. Berpengalaman mengembangkan
+          proyek berbasis Laravel, WhatsApp Gateway, Midtrans, Telegram Bot, dan n8n.
+        </p>
+
+        <!-- Tombol aksi -->
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary ripple-btn" id="btn-projects">
+            <i class="fas fa-rocket"></i>
+            <span>Lihat Proyek</span>
+          </a>
+          <!-- GANTI DATA DIRI DI SINI: Ganti link CV Anda di assets/files/cv.pdf -->
+          <a href="assets/files/cv.pdf" class="btn btn-secondary ripple-btn" id="btn-cv" download>
+            <i class="fas fa-download"></i>
+            <span>Download CV</span>
+          </a>
+          <a href="#contact" class="btn btn-outline ripple-btn" id="btn-contact">
+            <i class="fas fa-envelope"></i>
+            <span>Hubungi Saya</span>
+          </a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="hero-socials">
+          <!-- GANTI DATA DIRI DI SINI: Ganti URL profil sosial media Anda -->
+          <a href="[LINK GITHUB ANDA]" class="social-link" target="_blank" rel="noopener" aria-label="GitHub"
+            id="social-github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="[LINK LINKEDIN ANDA]" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn"
+            id="social-linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="[LINK INSTAGRAM ANDA]" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"
+            id="social-instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <!-- GANTI DATA DIRI DI SINI: Ganti dengan email Anda -->
+          <a href="mailto:[EMAIL ANDA]" class="social-link" aria-label="Email" id="social-email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <!-- GANTI DATA DIRI DI SINI: Ganti nomor WhatsApp Anda (format: 628xxx) -->
+          <a href="https://wa.me/[NOMOR WA ANDA]" class="social-link" target="_blank" rel="noopener"
+            aria-label="WhatsApp" id="social-wa">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-line">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== DIVIDER DEKORATIF ===== -->
+  <div class="section-divider">
+    <span class="line"></span>
+    <span class="icon"><i class="fas fa-asterisk"></i></span>
+    <span class="line"></span>
+  </div>
+  <!-- ============================================================
+       ABOUT ME SECTION
+       ============================================================ -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Tentang Saya</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <!-- Corner Decoration -->
+      <div class="corner-decor corner-decor-tl"></div>
+      <div class="corner-decor corner-decor-br"></div>
+      <div class="about-grid">
+        <!-- Kartu info personal -->
+        <div class="about-info-card" data-aos="fade-right" data-aos-duration="800">
+          <div class="about-card-header">
+            <i class="fas fa-user-circle"></i>
+            <h3>Personal Info</h3>
+          </div>
+          <ul class="about-info-list">
+            <!-- GANTI DATA DIRI DI SINI: Isi semua data personal berikut -->
+            <li>
+              <span class="info-label"><i class="fas fa-id-badge"></i> Nama</span>
+              <span class="info-value">KHAIRI SANGGA MUNANDAR</span>
+            </li>
+            <li>
+              <span class="info-label"><i class="fas fa-calendar-alt"></i> Lahir</span>
+              <span class="info-value">BEKASI, 13-02-2005</span>
+            </li>
+            <li>
+              <span class="info-label"><i class="fas fa-venus-mars"></i> Kelamin</span>
+              <span class="info-value">LAKI-LAKI</span>
+            </li>
+            <li>
+              <span class="info-label"><i class="fas fa-heart"></i> Status</span>
+              <span class="info-value">BELUM MENIKAH</span>
+            </li>
+            <li>
+              <span class="info-label"><i class="fas fa-map-marker-alt"></i> Alamat</span>
+              <span class="info-value">Jl. Kabupaten No.27, RW.11, Area Sawah, Trihanggo, Kec. Gamping, Kabupaten
+                Sleman, Daerah Istimewa Yogyakarta</span>
+            </li>
+            <li>
+              <span class="info-label"><i class="fas fa-phone"></i> Telepon</span>
+              <span class="info-value">085771645672</span>
+            </li>
+            <li>
+              <span class="info-label"><i class="fas fa-envelope"></i> Email</span>
+              <span class="info-value">khairis392@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Teks deskripsi -->
+        <div class="about-text-area" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+          <div class="about-quote-mark">"</div>
+          <p class="about-description">
+            Saya merupakan lulusan Sistem Informasi yang memiliki ketertarikan pada
+            pengembangan aplikasi web, integrasi sistem, otomasi workflow, dan analisis data.
+            Saya terbiasa menggunakan <strong>Laravel, MySQL, REST API, n8n</strong>,
+            serta berbagai tools pendukung pengembangan perangkat lunak. Saya senang
+            mempelajari teknologi baru dan mengembangkan proyek mandiri untuk meningkatkan
+            kemampuan teknis maupun problem solving.
+          </p>
+
+          <!-- Stats ringkas -->
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="10">0</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="4">0</span>
+              <span class="stat-label">Years Study</span>
+            </div>
+          </div>
+
+          <!-- Tombol CV -->
+          <a href="assets/files/cv.pdf" class="btn btn-primary ripple-btn" download>
+            <i class="fas fa-file-pdf"></i>
+            <span>Download CV</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hobbies & Interests -->
+      <div class="hobbies-section" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="sub-title">Hobbies &amp; <span class="gradient-text">Interests</span></h3>
+        <div class="hobbies-grid">
+          <div class="hobby-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="hobby-icon"><i class="fas fa-laptop-code"></i></div>
+            <p>Mempelajari teknologi baru dalam pengembangan perangkat lunak dan otomasi sistem</p>
+          </div>
+          <div class="hobby-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="hobby-icon"><i class="fas fa-project-diagram"></i></div>
+            <p>Mengembangkan proyek web dan workflow automation secara mandiri</p>
+          </div>
+          <div class="hobby-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="hobby-icon"><i class="fas fa-chart-line"></i></div>
+            <p>Mengikuti perkembangan teknologi informasi, data analytics, dan machine learning</p>
+          </div>
+          <div class="hobby-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="hobby-icon"><i class="fab fa-github"></i></div>
+            <p>Berbagi dan mendokumentasikan proyek melalui GitHub</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EDUCATION SECTION
+       ============================================================ -->
+  <section id="education" class="education section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Riwayat Belajar</span>
+        <h2 class="section-title">Edu<span class="gradient-text">cation</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Universitas -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-duration="800">
+          <div class="timeline-dot">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-card tilt-card">
+            <div class="timeline-badge">2022 – 2026</div>
+            <div class="timeline-icon-large">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3>Universitas Teknologi Yogyakarta</h3>
+            <h4>S1 Sistem Informasi</h4>
+            <p>Menempuh pendidikan sarjana di bidang Sistem Informasi dengan fokus pada pengembangan perangkat lunak,
+              manajemen basis data, analisis sistem, dan teknologi informasi terapan.</p>
+
+            <!-- ===== MARQUEE ANIMASI TIMELINE TAGS ===== -->
+            <div class="marquee-tags">
+              <div class="marquee-tags-content">
+                <span class="marquee-tag">Sistem Informasi</span>
+                <span class="marquee-tag">Software Engineering</span>
+                <span class="marquee-tag">Database</span>
+                <span class="marquee-tag">Sistem Informasi</span>
+                <span class="marquee-tag">Software Engineering</span>
+                <span class="marquee-tag">Database</span>
+              </div>
+            </div>
+            <!-- ===== END MARQUEE ===== -->
+
+          </div>
+        </div>
+
+        <!-- SMA -->
+        <!-- GANTI DATA DIRI DI SINI: Ganti data SMA Anda -->
+        <div class="timeline-item timeline-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+          <div class="timeline-dot">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="timeline-card tilt-card">
+            <div class="timeline-badge">[2019] – [2022]</div>
+            <div class="timeline-icon-large">
+              <i class="fas fa-school"></i>
+            </div>
+            <h3>[SMA Negeri 6 Karawang]</h3>
+            <h4>[IPA]</h4>
+            <p>Menyelesaikan pendidikan menengah atas dengan jurusan IPA. Memiliki ketertarikan pada dunia teknologi dan
+              sains</p>
+            <div class="timeline-tags">
+            </div>
+          </div>
+        </div>
+
+        <!-- SMP -->
+        <!-- GANTI DATA DIRI DI SINI: Ganti data SMP Anda -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+          <div class="timeline-dot">
+            <i class="fas fa-book"></i>
+          </div>
+          <div class="timeline-card tilt-card">
+            <div class="timeline-badge">[2016] – [2019]</div>
+            <div class="timeline-icon-large">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3>[SMP Islam Terpadu Mentari Ilmu Karawang]</h3>
+            <h4>Sekolah Menengah Pertama</h4>
+            <p> Menyelesaikan pendidikan menengah pertama dengan prestasi akademik yang baik.
+              Pengalaman pertama dalam pengembangan website menggunakan WordPress untuk
+              keperluan pengiriman tugas sekolah, yang memicu minat mendalam di bidang
+              teknologi informasi dan pengembangan web.</p>
+            <div class="timeline-tags">
+              <span>wordpress</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE & ORGANIZATION SECTION
+       ============================================================ -->
+  <section id="experience" class="experience section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Perjalanan Karier</span>
+        <h2 class="section-title">Experi<span class="gradient-text">ence</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="experience-grid">
+        <!-- Kolom kiri: Work Experience -->
+        <div class="exp-column">
+          <h3 class="exp-column-title" data-aos="fade-right">
+            <i class="fas fa-briefcase"></i> Work Experience
+          </h3>
+
+          <!-- Kerja Praktik -->
+          <div class="exp-card tilt-card" data-aos="fade-right" data-aos-delay="100">
+            <div class="exp-card-left">
+              <div class="exp-dot active"></div>
+              <div class="exp-line"></div>
+            </div>
+            <div class="exp-card-body">
+              <span class="exp-badge">Internship</span>
+              <h4>SMP Negeri 3 Rajadesa Ciamis</h4>
+              <h5>Kerja Praktik - Tugas Akhir</h5>
+              <!-- GANTI DATA DIRI DI SINI: Isi periode kerja praktik -->
+              <span class="exp-period"><i class="far fa-calendar"></i> 14 februari 2025 – 1 juni 2026</span>
+              <!-- GANTI DATA DIRI DI SINI: Isi deskripsi kegiatan kerja praktik -->
+              <p>Melaksanakan analisis kebutuhan sistem serta mengembangkan Sistem Informasi
+        Administrasi Tata Usaha Seragam Siswa berbasis website. Mengimplementasikan
+        fitur pemesanan seragam, pembayaran, integrasi WhatsApp Gateway, serta
+        menyusun dokumentasi dan melakukan pengujian sistem sebelum implementasi.</p>
+              <div class="exp-tags">
+                <span>Laravel</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>WhatsApp Gateway</span>
+                <span>QR Code</span>              
+              </div>
+            </div>
+          </div>
+
+          <!-- Freelance -->
+          <!-- GANTI DATA DIRI DI SINI: Isi data freelance Anda -->
+           <!--  <div class="exp-card tilt-card" data-aos="fade-right" data-aos-delay="200">
+            <div class="exp-card-left">
+              <div class="exp-dot"></div>
+              <div class="exp-line"></div>
+            </div>
+            <div class="exp-card-body">
+              <span class="exp-badge freelance">Freelance</span>
+              <h4>[NAMA KLIEN / JENIS PROJECT]</h4>
+              <h5>Freelance Developer</h5>
+              <span class="exp-period"><i class="far fa-calendar"></i> [Bulan Tahun] – [Bulan Tahun]</span>
+              <p>[Deskripsi proyek freelance yang dikerjakan]</p>
+              <div class="exp-tags">
+                <span>[Teknologi 1]</span>
+                <span>[Teknologi 2]</span>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Magang -->
+          <!-- GANTI DATA DIRI DI SINI: Isi data magang Anda -->
+           <!--  <div class="exp-card tilt-card" data-aos="fade-right" data-aos-delay="300">
+            <div class="exp-card-left">
+              <div class="exp-dot"></div>
+            </div>
+            <div class="exp-card-body">
+              <span class="exp-badge magang">Magang</span>
+              <h4>[NAMA INSTANSI / PERUSAHAAN]</h4>
+              <h5>[Posisi / Jabatan]</h5>
+              <span class="exp-period"><i class="far fa-calendar"></i> [Bulan Tahun] – [Bulan Tahun]</span>
+              <p>[Deskripsi kegiatan magang]</p>
+              <div class="exp-tags">
+                <span>[Teknologi 1]</span>
+                <span>[Teknologi 2]</span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Kolom kanan: Organization -->
+       <!-- <div class="exp-column">
+          <h3 class="exp-column-title" data-aos="fade-left">
+            <i class="fas fa-users"></i> Organization
+          </h3>-->
+
+          <!-- Organisasi -->
+          <!-- GANTI DATA DIRI DI SINI: Isi data organisasi Anda -->
+        <!--   <div class="exp-card tilt-card" data-aos="fade-left" data-aos-delay="100">
+            <div class="exp-card-left">
+              <div class="exp-dot active"></div>
+              <div class="exp-line"></div>
+            </div>
+            <div class="exp-card-body">
+              <span class="exp-badge org">Organisasi</span>
+              <h4>[NAMA ORGANISASI]</h4>
+              <h5>[Jabatan / Divisi]</h5>
+              <span class="exp-period"><i class="far fa-calendar"></i> [Tahun] – [Tahun]</span>
+              <p>[Deskripsi kegiatan organisasi dan tanggung jawab Anda]</p>
+              <div class="exp-tags">
+                <span>[Kegiatan 1]</span>
+                <span>[Kegiatan 2]</span>
+              </div>
+            </div>
+          </div>-->
+
+          <!-- Organisasi 2 -->
+          <!-- GANTI DATA DIRI DI SINI: Tambahkan atau hapus kartu ini sesuai kebutuhan -->
+         <!--    <div class="exp-card tilt-card" data-aos="fade-left" data-aos-delay="200">
+            <div class="exp-card-left">
+              <div class="exp-dot"></div>
+            </div>
+            <div class="exp-card-body">
+              <span class="exp-badge org">Organisasi</span>
+              <h4>[NAMA ORGANISASI 2]</h4>
+              <h5>[Jabatan / Divisi]</h5>
+              <span class="exp-period"><i class="far fa-calendar"></i> [Tahun] – [Tahun]</span>
+              <p>[Deskripsi kegiatan organisasi kedua]</p>
+              <div class="exp-tags">
+                <span>[Kegiatan 1]</span>
+                <span>[Kegiatan 2]</span>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Soft Skills -->
+          <div class="soft-skills-card" data-aos="fade-left" data-aos-delay="300">
+            <h4><i class="fas fa-brain"></i> Soft Skills</h4>
+            <div class="soft-skills-grid">
+              <div class="soft-skill-item">
+                <i class="fas fa-comments"></i>
+                <span>Communication</span>
+              </div>
+              <div class="soft-skill-item">
+                <i class="fas fa-users"></i>
+                <span>Teamwork</span>
+              </div>
+              <div class="soft-skill-item">
+                <i class="fas fa-lightbulb"></i>
+                <span>Problem Solving</span>
+              </div>
+              <div class="soft-skill-item">
+                <i class="fas fa-search"></i>
+                <span>Analytical Thinking</span>
+              </div>
+              <div class="soft-skill-item">
+                <i class="fas fa-sync-alt"></i>
+                <span>Adaptability</span>
+              </div>
+              <div class="soft-skill-item">
+                <i class="fas fa-clock"></i>
+                <span>Time Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+       ============================================================ -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Kemampuan Teknis</span>
+        <h2 class="section-title">Tech <span class="gradient-text">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="skills-filter" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="language">Languages</button>
+        <button class="filter-btn" data-filter="framework">Frameworks</button>
+        <button class="filter-btn" data-filter="database">Database</button>
+        <button class="filter-btn" data-filter="api">API & Integration</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+        <button class="filter-btn" data-filter="data">Data & Analytics</button>
+        <button class="filter-btn" data-filter="se">Software Eng.</button>
+      </div>
+
+      <!-- Skills grid -->
+      <div class="skills-grid" id="skills-grid">
+
+        <!-- Programming Languages -->
+        <div class="skill-card tilt-card" data-category="language" data-aos="zoom-in" data-aos-delay="50">
+          <div class="skill-icon-wrap"><i class="fab fa-php"></i></div>
+          <span class="skill-name">PHP</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="language" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon-wrap"><i class="fab fa-python"></i></div>
+          <span class="skill-name">Python</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="language" data-aos="zoom-in" data-aos-delay="150">
+          <div class="skill-icon-wrap"><i class="fab fa-java"></i></div>
+          <span class="skill-name">Java</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="language" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon-wrap"><i class="fas fa-database"></i></div>
+          <span class="skill-name">SQL</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="language" data-aos="zoom-in" data-aos-delay="250">
+          <div class="skill-icon-wrap"><i class="fab fa-html5"></i></div>
+          <span class="skill-name">HTML5</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="language" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-icon-wrap"><i class="fab fa-css3-alt"></i></div>
+          <span class="skill-name">CSS3</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="language" data-aos="zoom-in" data-aos-delay="350">
+          <div class="skill-icon-wrap"><i class="fab fa-js-square"></i></div>
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-card tilt-card" data-category="framework" data-aos="zoom-in" data-aos-delay="50">
+          <div class="skill-icon-wrap"><i class="fab fa-laravel"></i></div>
+          <span class="skill-name">Laravel</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="framework" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon-wrap"><i class="fab fa-bootstrap"></i></div>
+          <span class="skill-name">Bootstrap</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="framework" data-aos="zoom-in" data-aos-delay="150">
+          <div class="skill-icon-wrap"><i class="fas fa-chart-bar"></i></div>
+          <span class="skill-name">Streamlit</span>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-card tilt-card" data-category="database" data-aos="zoom-in" data-aos-delay="50">
+          <div class="skill-icon-wrap"><i class="fas fa-server"></i></div>
+          <span class="skill-name">MySQL</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="database" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon-wrap"><i class="fas fa-sitemap"></i></div>
+          <span class="skill-name">DB Design</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="database" data-aos="zoom-in" data-aos-delay="150">
+          <div class="skill-icon-wrap"><i class="fas fa-exchange-alt"></i></div>
+          <span class="skill-name">DB Migration</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="database" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon-wrap"><i class="fas fa-table"></i></div>
+          <span class="skill-name">RDBMS</span>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- API & Integration -->
+        <div class="skill-card tilt-card" data-category="api" data-aos="zoom-in" data-aos-delay="50">
+          <div class="skill-icon-wrap"><i class="fas fa-plug"></i></div>
+          <span class="skill-name">REST API</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="api" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon-wrap"><i class="fab fa-whatsapp"></i></div>
+          <span class="skill-name">WA Gateway</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="api" data-aos="zoom-in" data-aos-delay="150">
+          <div class="skill-icon-wrap"><i class="fas fa-credit-card"></i></div>
+          <span class="skill-name">Midtrans</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="api" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon-wrap"><i class="fab fa-telegram"></i></div>
+          <span class="skill-name">Telegram Bot</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="api" data-aos="zoom-in" data-aos-delay="250">
+          <div class="skill-icon-wrap"><i class="fas fa-robot"></i></div>
+          <span class="skill-name">n8n Automation</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="api" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-icon-wrap"><i class="fas fa-file-excel"></i></div>
+          <span class="skill-name">Google Sheets</span>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- Data & Analytics -->
+        <div class="skill-card tilt-card" data-category="data" data-aos="zoom-in" data-aos-delay="50">
+          <div class="skill-icon-wrap"><i class="fas fa-chart-area"></i></div>
+          <span class="skill-name">Data Analysis</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="data" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon-wrap"><i class="fas fa-brain"></i></div>
+          <span class="skill-name">Machine Learning</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="data" data-aos="zoom-in" data-aos-delay="150">
+          <div class="skill-icon-wrap"><i class="fas fa-search-plus"></i></div>
+          <span class="skill-name">Data Mining</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="data" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon-wrap"><i class="fas fa-tachometer-alt"></i></div>
+          <span class="skill-name">Business Intel.</span>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="50">
+          <div class="skill-icon-wrap"><i class="fab fa-git-alt"></i></div>
+          <span class="skill-name">Git</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon-wrap"><i class="fab fa-github"></i></div>
+          <span class="skill-name">GitHub</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="150">
+          <div class="skill-icon-wrap"><i class="fas fa-paper-plane"></i></div>
+          <span class="skill-name">Postman</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon-wrap"><i class="fas fa-code"></i></div>
+          <span class="skill-name">VS Code</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="250">
+          <div class="skill-icon-wrap"><i class="fab fa-android"></i></div>
+          <span class="skill-name">Android Studio</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-icon-wrap"><i class="fab fa-figma"></i></div>
+          <span class="skill-name">Figma</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="350">
+          <div class="skill-icon-wrap"><i class="fab fa-docker"></i></div>
+          <span class="skill-name">Docker</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="400">
+          <div class="skill-icon-wrap"><i class="fas fa-server"></i></div>
+          <span class="skill-name">XAMPP</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="450">
+          <div class="skill-icon-wrap"><i class="fas fa-fire"></i></div>
+          <span class="skill-name">Laragon</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="tools" data-aos="zoom-in" data-aos-delay="500">
+          <div class="skill-icon-wrap"><i class="fas fa-globe"></i></div>
+          <span class="skill-name">cPanel</span>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- Software Engineering -->
+        <div class="skill-card tilt-card" data-category="se" data-aos="zoom-in" data-aos-delay="50">
+          <div class="skill-icon-wrap"><i class="fas fa-project-diagram"></i></div>
+          <span class="skill-name">UML</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="se" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon-wrap"><i class="fas fa-drafting-compass"></i></div>
+          <span class="skill-name">System Analysis</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="se" data-aos="zoom-in" data-aos-delay="150">
+          <div class="skill-icon-wrap"><i class="fas fa-recycle"></i></div>
+          <span class="skill-name">SDLC</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="se" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon-wrap"><i class="fas fa-file-alt"></i></div>
+          <span class="skill-name">Tech Documentation</span>
+          <div class="skill-glow"></div>
+        </div>
+        <div class="skill-card tilt-card" data-category="se" data-aos="zoom-in" data-aos-delay="250">
+          <div class="skill-icon-wrap"><i class="fas fa-vial"></i></div>
+          <span class="skill-name">Black Box Testing</span>
+          <div class="skill-glow"></div>
+        </div>
+
+      </div><!-- /skills-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+       ============================================================ -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Hasil Karya</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card tilt-card">
+          <div class="project-thumbnail">
+            <img src="assets/images/project-seragam.png" alt="Sistem Informasi Administrasi Tata Usaha Seragam Siswa"
+              loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-overlay-links">
+                <a href="https://github.com/sanggaM13/sia-seragam-smpn3rajadesa" class="overlay-btn" target="_blank"
+                  rel="noopener" id="proj1-github">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://seragamsmpn3rajadesa.my.id" class="overlay-btn overlay-btn-live" target="_blank"
+                  rel="noopener" id="proj1-demo">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">01</div>
+            <h3 class="project-title">Sistem Informasi Administrasi Tata Usaha Seragam Siswa</h3>
+            <p class="project-description">
+              Sistem informasi berbasis web untuk mengelola administrasi tata usaha seragam siswa,
+              dilengkapi multi-role authentication, notifikasi WhatsApp, dan laporan transaksi lengkap.
+            </p>
+            <div class="project-features">
+              <span class="feature-tag"><i class="fas fa-check"></i> Multi-role Authentication</span>
+              <span class="feature-tag"><i class="fas fa-check"></i> WhatsApp Notification</span>
+              <span class="feature-tag"><i class="fas fa-check"></i> Transaction Reports</span>
+            </div>
+            <div class="project-tech">
+              <span>Laravel 11</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>WA Gateway</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/sanggaM13" class="project-btn" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="" class="project-btn project-btn-live" target="_blank" rel="noopener">
+                <i class="fas fa-globe"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- PROJECT 2 -->
+        <!-- GANTI DATA DIRI DI SINI: Ganti link GitHub dan Live Demo Project 2 -->
+        <div class="project-card tilt-card">
+          <div class="project-thumbnail">
+            <img src="assets/images/project-finance-bot.png" alt="Personal Finance Automation Bot" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-overlay-links">
+                <a href="https://github.com/sanggaM13" class="overlay-btn" target="_blank" rel="noopener"
+                  id="proj2-github">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://telegram.me/BotFather" class="project-btn project-btn-live" target="_blank"
+                  rel="noopener">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">02</div>
+            <h3 class="project-title">Personal Finance Automation Bot</h3>
+            <p class="project-description">
+              Bot Telegram untuk otomasi pencatatan keuangan pribadi secara real-time.
+              Terintegrasi dengan Google Sheets sebagai database dan n8n sebagai workflow
+              automation engine, menghasilkan laporan keuangan otomatis setiap bulan.
+            </p>
+            <div class="project-features">
+              <span class="feature-tag"><i class="fas fa-check"></i> Expense Tracking Automation</span>
+              <span class="feature-tag"><i class="fas fa-check"></i> Telegram Integration</span>
+              <span class="feature-tag"><i class="fas fa-check"></i> Google Sheets Reporting</span>
+            </div>
+            <div class="project-tech">
+              <span>n8n</span>
+              <span>Telegram Bot API</span>
+              <span>Google Sheets</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/sanggaM13" class="project-btn" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://telegram.me/BotFather" class="project-btn project-btn-live" target="_blank"
+                rel="noopener">
+                <i class="fas fa-globe"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+       ============================================================ -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Hubungi Saya</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Kartu kontak -->
+        <div class="contact-cards" data-aos="fade-right" data-aos-duration="800">
+          <p class="contact-intro">
+            Saya terbuka untuk peluang kerja, kolaborasi proyek, dan diskusi teknologi.
+            Jangan ragu untuk menghubungi saya melalui:
+          </p>
+
+          <!-- GANTI DATA DIRI DI SINI: Ganti semua info kontak berikut -->
+          <div class="contact-card-item" id="contact-wa">
+            <div class="contact-card-icon wa">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">WhatsApp</span>
+              <a href="https://wa.me/6285771645672" target="_blank" rel="noopener">085771645672</a>
+            </div>
+          </div>
+
+          <div class="contact-card-item" id="contact-email">
+            <div class="contact-card-icon email">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Email</span>
+              <a href="mailto:khairis392@gmail.com">khairis392@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-card-item" id="contact-linkedin">
+            <div class="contact-card-icon linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">LinkedIn</span>
+              <a href="www.linkedin.com/in/khairi-sangga-m" target="_blank" rel="noopener">KHAIRI (MUNANDAR) SANGGA</a>
+            </div>
+          </div>
+
+          <div class="contact-card-item" id="contact-github">
+            <div class="contact-card-icon github">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">GitHub</span>
+              <a href="https://github.com/sanggaM13" target="_blank" rel="noopener">sanggaM13</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form kontak -->
+        <div class="contact-form-wrapper" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Nama Pengirim</label>
+              <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="contact-name" name="name" placeholder="Masukkan nama Anda" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-email-input">Email</label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="contact-email-input" name="email" placeholder="Masukkan email Anda" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Pesan</label>
+              <div class="input-wrapper textarea-wrapper">
+                <i class="fas fa-comment-alt"></i>
+                <textarea id="contact-message" name="message" placeholder="Tulis pesan Anda..." rows="5"
+                  required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary ripple-btn btn-full" id="btn-send">
+              <i class="fas fa-paper-plane"></i>
+              <span>Kirim Pesan</span>
+            </button>
+            <!-- Pesan sukses/error -->
+            <div class="form-message" id="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer-bg">
+      <div class="footer-orb orb-left"></div>
+      <div class="footer-orb orb-right"></div>
+    </div>
+    <div class="container">
+      <div class="footer-content">
+        <!-- Logo & tagline -->
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <span class="logo-bracket"></span>
+            <!-- GANTI DATA DIRI DI SINI: Ganti inisial/nama singkat Anda -->
+            <span class="logo-name">KS</span>
+            <span class="logo-bracket"></span>
+          </a>
+          <p>Fullstack Developer &amp; System Analyst</p>
+          <!-- GANTI DATA DIRI DI SINI: Ganti nama di copyright -->
+          <p class="footer-copy">&copy; 2026 <strong>KHAIRI SANGGA MUNANDAR</strong>. All rights reserved.</p>
+        </div>
+
+        <!-- Social media icons -->
+        <div class="footer-socials">
+          <!-- GANTI DATA DIRI DI SINI: Ganti URL sesuai profil Anda -->
+          <a href="https://github.com/sanggaM13" class="footer-social-link" target="_blank" rel="noopener"
+            aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="www.linkedin.com/in/khairi-sangga-m" class="footer-social-link" target="_blank" rel="noopener"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/_.sangga?igsh=MWhvN2FiMm9kMGI5Mw==" class="footer-social-link"
+            target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:khairis392@gmail.com" class="footer-social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/6285771645672" class="footer-social-link" target="_blank" rel="noopener"
+            aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+       ============================================================ -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+    <svg class="back-to-top-progress" viewBox="0 0 36 36">
+      <circle class="progress-ring-circle" cx="18" cy="18" r="16" />
+    </svg>
+  </button>
+
+  <!-- ============================================================
+       EXTERNAL LIBRARIES (JS)
+       ============================================================ -->
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- MAIN JS -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Force show skills immediately tanpa scroll
+    document.addEventListener('DOMContentLoaded', function () {
+      // Tunggu sebentar agar GSAP tidak mengganggu
+      setTimeout(function () {
+        const cards = document.querySelectorAll('.skill-card');
+        cards.forEach((card, index) => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0) scale(1)';
+          card.style.visibility = 'visible';
+          card.style.display = 'flex';
+
+          // Tambahkan animasi muncul bertahap
+          setTimeout(() => {
+            card.style.transition = 'all 0.3s ease';
+          }, index * 50);
+        });
+        console.log('✅ All skills shown immediately!');
+      }, 300);
+    });
+  </script>
+</body>
+
+</html>
