@@ -4223,3 +4223,148 @@ body.dark-mode .corner-decor {
     padding: 3px 10px;
   }
 }
+
+/* ================================================================
+   PERBAIKAN KHUSUS HP - TAMPILAN RAPI
+   ================================================================ */
+
+/* --- Perbaiki navbar di HP --- */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 12px !important;
+    gap: 4px !important;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem !important;
+  }
+
+  .logo-bracket {
+    display: none !important;
+  }
+
+  .dark-mode-toggle {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 0.75rem !important;
+    margin-left: 2px !important;
+  }
+
+  .dark-mode-toggle i {
+    font-size: 0.8rem !important;
+  }
+
+  .hamburger {
+    padding: 4px !important;
+  }
+
+  .bar {
+    width: 20px !important;
+    height: 2px !important;
+  }
+
+  /* --- Perbaiki hero text --- */
+  .hero-name {
+    font-size: 1.8rem !important;
+    word-break: break-word !important;
+  }
+
+  .hero-position {
+    font-size: 0.95rem !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .typing-text {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-description {
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+    padding: 0 8px !important;
+  }
+
+  /* --- Perbaiki foto --- */
+  .hero-image-frame {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  .ring-1 {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .ring-2 {
+    width: 240px !important;
+    height: 240px !important;
+  }
+
+  /* --- Perbaiki tombol --- */
+  .hero-buttons .btn {
+    font-size: 0.85rem !important;
+    padding: 10px 20px !important;
+    max-width: 240px !important;
+  }
+
+  /* --- Perbaiki greeting --- */
+  .hero-greeting {
+    font-size: 0.8rem !important;
+    gap: 8px !important;
+  }
+
+  .greeting-line {
+    width: 30px !important;
+  }
+}
+
+/* --- Perbaiki untuk HP sangat kecil --- */
+@media (max-width: 400px) {
+  .hero-name {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-position {
+    font-size: 0.85rem !important;
+  }
+
+  .typing-text {
+    font-size: 0.85rem !important;
+  }
+
+  .hero-image-frame {
+    width: 140px !important;
+    height: 140px !important;
+  }
+
+  .ring-1 {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .ring-2 {
+    display: none !important;
+  }
+
+  .hero-badge {
+    font-size: 0.55rem !important;
+    padding: 2px 10px !important;
+  }
+
+  .hero-description {
+    font-size: 0.8rem !important;
+  }
+
+  .hero-buttons .btn {
+    font-size: 0.8rem !important;
+    padding: 8px 16px !important;
+    max-width: 200px !important;
+  }
+
+  .social-link {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.8rem !important;
+  }
+}
